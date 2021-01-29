@@ -1,0 +1,4 @@
+[alias]
+	# llog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	llog = log --oneline
+	glog = log --oneline --all --graph
