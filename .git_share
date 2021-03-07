@@ -3,3 +3,4 @@
 	llog = log --oneline
 	glog = log --decorate --oneline --all --graph
 	unstash = stash pop
+	st = status
