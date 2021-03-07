@@ -6,4 +6,4 @@ alias mv='mv -i'
 alias dc=cd
 alias open=xdg-open
 alias gdb='gdb -q'
-alias work='cd Code/modern_compiler_implementation/tiger/'
+alias work='cd ~/Code/modern_compiler_implementation/tiger/ && tmux'
