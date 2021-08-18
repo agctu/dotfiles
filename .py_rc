@@ -1,0 +1,49 @@
+import os
+
+print('preimporting')
+
+def pdir(*argv):
+    if len(argv)==0:
+        res=[i for i in globals()]
+    elif len(argv)==1:
+        res=dir(argv[0])
+    else:
+        res=[i for i in dir(argv[0]) if argv[1] in i]
+    print('\t'.join(res))
+
+def find(root,name):
+    try:
+        if '__module__' in dir(root):
+            path=root.__module__+'.'+root.__name__
+        else:
+            path=root.__name__
+        print(path,end='\r')
+        for i in dir(root):
+            if name.lower() in i.lower():
+                print(path+'.'+i)
+            find(eval(path+'.'+i),name)
+    except Exception as e:
+#print(e)
+        pass
+
+class Cmd:
+    def __init__(self,cmd):
+        self.cmd=cmd
+
+    def __repr__(self):
+        os.system(self.cmd)
+        return ''
+
+cls=Cmd('cls')
+
+del Cmd
+
+if 'auto_load.py' in os.listdir():
+    from auto_load import *
+
+if 'load_list' in dir():
+    for i in load_list:
+        exec('from %s import *' % i)
+
+    del load_list
+
