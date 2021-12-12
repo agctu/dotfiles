@@ -1,5 +1,6 @@
 set nocompatible
 set encoding=utf8
+set fileencodings=utf8,cp936
 syntax enable
 syntax on
 set autochdir
@@ -10,7 +11,7 @@ set number
 set cursorline
 nnoremap <F2> gg"+yG<C-o><C-o>
 nnoremap <F3> :call SetTitle()<CR>9gg$
-nnoremap <F4> :edit $vim\_vimrc<CR>
+nnoremap <F4> :split $vim\_vimrc<CR>
 nnoremap <F5> :call CompileCurrentFile()<CR>
 nnoremap <F6> :source $vim\_vimrc<CR>
 func! SetTitle()
@@ -40,6 +41,7 @@ set tabstop=4
 set shiftwidth=4
 set cindent
 set autoindent
+set expandtab
 "set hls
 set incsearch
 set guifont=Lucida_console:h12:cANSI:qDRAFT
@@ -47,5 +49,10 @@ set foldmethod=syntax
 set autoread
 set runtimepath^=D:\.vim\bundle\ctrlp.vim
 set runtimepath^=D:\.vim\bundle\vim-easymotion
+set runtimepath^=D:\.vim\bundle\ale
 set noswapfile
 map <Leader> <Plug>(easymotion-prefix)
+"helptags ALL //this load all helptags of the (?) packages.
+
+"this does not work?
+filetype plugin on
