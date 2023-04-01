@@ -26,6 +26,21 @@ def find(root,name):
 #print(e)
         pass
 
+def readBytes(name):
+    with open(name,'rb') as f:
+        return f.read()
+
+def writeBytes(name,bt):
+    with open(name,'wb') as f:
+        f.write(bt)
+
+def execfile(path):
+    '''
+        exec file with path `path` in global scope
+    '''
+    with open(path) as f:
+        exec(f.read(),globals())
+
 class Cmd:
     def __init__(self,cmd):
         self.cmd=cmd
@@ -39,11 +54,11 @@ cls=Cmd('cls')
 del Cmd
 
 if 'auto_load.py' in os.listdir():
-    from auto_load import *
+    execfile('auto_load.py')
+#    from auto_load import *
 
 if 'load_list' in dir():
     for i in load_list:
         exec('from %s import *' % i)
 
     del load_list
-
