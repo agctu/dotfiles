@@ -1,4 +1,4 @@
-alias python=python3
+if [[ "$OSTYPE" == "linux-gnu" ]]; then alias python=python3; fi;
 alias pip=pip3
 alias md=mkdir
 alias cls=clear
