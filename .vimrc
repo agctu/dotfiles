@@ -9,6 +9,11 @@ set statusline=%10.20t\ %10.20([%M%R%H]%)\ %15.45(Line\ %l\ of\ %L\ %P\ Col\ %c%
 set backspace=indent,eol,start
 set number
 set cursorline
+"window move
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 nnoremap <F2> gg"+yG<C-o><C-o>
 nnoremap <F3> :call SetTitle()<CR>9gg$
 nnoremap <F4> :split $vim\_vimrc<CR>
