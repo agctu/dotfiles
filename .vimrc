@@ -50,7 +50,7 @@ set expandtab
 "set hls
 set incsearch
 set guifont=Lucida_console:h12:cANSI:qDRAFT
-set foldmethod=syntax
+"set foldmethod=syntax
 set autoread
 set runtimepath^=D:\.vim\bundle\ctrlp.vim
 set runtimepath^=D:\.vim\bundle\vim-easymotion
