@@ -1,10 +1,18 @@
-if [[ "$OSTYPE" == "linux-gnu" ]]; then alias python=python3; fi;
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias python=python3;
+    alias open=xdg-open;
+    # go to my compiler folder
+    alias work='cd ~/Code/modern_compiler_implementation/tiger/ && tmux'
+elif [[ "$OSTYPE" == "msys" ]]; then
+    alias open=explorer;
+else
+    echo "Unexpected";
+fi;
+
+alias cls=clear # I'm used to cls in windows cmd
 alias pip=pip3
 alias md=mkdir
-alias cls=clear
 alias mv='mv -i'
 alias dc=cd
-if [[ "$OSTYPE" == "linux-gnu" ]]; then alias open=xdg-open;
-elif [[ "$OSTYPE" == "msys" ]]; then alias open=explorer; fi;
-alias gdb='gdb -q'
-alias work='cd ~/Code/modern_compiler_implementation/tiger/ && tmux'
+alias gdb='gdb -q' # avoid tedious sentences
+alias find=/usr/bin/find # in msys on my windows pc, find is resolute to that find of windows
