@@ -4,3 +4,4 @@
 	glog = log --decorate --oneline --all --graph
 	unstash = stash pop
 	st = status
+    append = commit --amend --no-edit
