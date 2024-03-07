@@ -43,11 +43,15 @@ func! CompileCurrentFile()
 	exec "!g++ % -std=c++11 -g"
 	endfunc
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set cindent
 set autoindent
 set expandtab
 "set hls
+"from here-> https://stackoverflow.com/questions/6076592/vim-set-formatoptions-being-lost
+autocmd BufNewFile,BufRead * setlocal formatoptions=cql
+"set formatoptions=cql
 set incsearch
 set guifont=Lucida_console:h12:cANSI:qDRAFT
 "set foldmethod=syntax
