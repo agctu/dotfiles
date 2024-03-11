@@ -20,23 +20,8 @@ nnoremap <F4> :split $vim\_vimrc<CR>
 nnoremap <F5> :call CompileCurrentFile()<CR>
 nnoremap <F6> :source $vim\_vimrc<CR>
 func! SetTitle()
-	call setline(1,'#include <bits/stdc++.h>')
-	call setline(2,'')
-	call setline(3,'using namespace std;')
-	call setline(4,'')
-	call setline(5,'typedef long long ll;')
-	call setline(6,'')
-	call setline(7,'void solve(){')
-	call setline(8,'    ')
-	call setline(9,'}')
-	call setline(10,'int main(){')
-	call setline(11,'    time_t stim=clock();')
-	call setline(12,'    int t;')
-	call setline(13,'    cin>>t;')
-	call setline(14,'    while(t--)solve();')
-	call setline(15,'    cerr<<"Time use : "<<clock()-stim<<" ms"<<endl;')
-	call setline(16,'    return 0;')
-	call setline(17,'}')
+    exec "r D:/code/mine/competitive_programming/codeforces_template.cpp"
+    exec "normal ggdd"
 	endfunc
 func! CompileCurrentFile() 
 	exec "w"
