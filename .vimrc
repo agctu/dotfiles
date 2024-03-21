@@ -16,9 +16,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <F2> gg"+yG<C-o><C-o>
 nnoremap <F3> :call SetTitle()<CR>9gg$
-nnoremap <F4> :split $vim\_vimrc<CR>
+nnoremap <F4> :split $MYVIMRC<CR>
 nnoremap <F5> :call CompileCurrentFile()<CR>
-nnoremap <F6> :source $vim\_vimrc<CR>
+nnoremap <F6> :source $MYVIMRC<CR>
 func! SetTitle()
     exec "r D:/code/mine/competitive_programming/codeforces_template.cpp"
     exec "normal ggdd"
