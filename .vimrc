@@ -52,6 +52,11 @@ func! CompileCurrentFile()
 	endfunc
 "}}}
 
+"Automatic very-magic. {{{
+nnoremap / /\v
+nnoremap ? ?\v
+"}}}
+
 "Indentation {{{
 set tabstop=4
 set softtabstop=4
