@@ -78,9 +78,12 @@ augroup END
 "}}}
 
 "Plugins {{{
+filetype off
+
 set runtimepath^=D:\.vim\bundle\ctrlp.vim
 set runtimepath^=D:\.vim\bundle\vim-easymotion
 set runtimepath^=D:\.vim\bundle\ale
+set runtimepath^=D:\code\vimscript\lvthw\potion-plugin
 set noswapfile
 map <Leader> <Plug>(easymotion-prefix)
 "helptags ALL //this load all helptags of the (?) packages.
