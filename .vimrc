@@ -22,11 +22,21 @@ set fileencodings=utf8,cp936
 set laststatus=2
 set statusline= "clear
 set statusline+=%10.20t "file name of buffer
-set statusline+=\ %10.20([%M%R%H]%) "mode flags
-set statusline+=\ %15.45(Line\ %l\ of\ %L\ %P\ Col\ %c%V%) "current position
-set statusline+=\ %10.20(Byte\ %b\ %B%) "current character
+set statusline+=\ %M "modified?
+set statusline+=\ %y
+set statusline+=\ \ %15.45(char\ %o(%l/%L(%P),%c%V)%)=%b(0x%B) "current character
 set statusline+=%= "splitter
-set statusline+=%-100.400(%10(%{&fileformat}\ Type=%y\ Encoding=%{&enc}\ %{&bomb?\"with\ BOM\":\"\"}%)%) "file attributes
+set statusline+=%-20(%{GetNewEOL()}\ %{&enc}\ %{&bomb?\"with\ BOM\":\"\"}%) "encoding and system related attributes
+
+function! GetNewEOL()
+    if &ff==# 'dos'
+        return '<CR><NL>'
+    elseif &ff==# 'unix'
+        return '<NL>'
+    elseif &ff=='max'
+        return '<CR>'
+    return '<EOL>'
+endfunction
 "}}}
 
 "Window Move {{{
