@@ -13,6 +13,12 @@ set autoread
 "set hls
 "}}}
 
+"Python {{{
+set pythonthreedll=C:\Users\Dell\AppData\Local\Programs\Python\Python37-32\python37.dll
+silent! python3 print("hello")
+cnoremap <expr> py getcmdline()==#''?'py3':'py'
+"}}}
+
 "Encoding {{{
 set encoding=utf8
 set fileencodings=utf8,cp936
