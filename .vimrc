@@ -59,7 +59,7 @@ nnoremap <F4> :split $MYVIMRC<CR>
 nnoremap <F5> :call CompileCurrentFile()<CR>
 nnoremap <F6> :source $MYVIMRC<CR>
 func! SetTitle()
-    exec "r D:/code/mine/competitive_programming/codeforces_template.cpp"
+    exec "r D:/code/templates/cpp/codeforces_template.cpp"
     exec "normal ggdd"
 	endfunc
 func! CompileCurrentFile() 
