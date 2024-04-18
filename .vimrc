@@ -10,6 +10,8 @@ set incsearch
 set guifont=Lucida_console:h12:cANSI:qDRAFT
 "set foldmethod=syntax
 set autoread
+colorscheme evening
+set guioptions-=T
 "set hls
 "}}}
 
@@ -101,6 +103,7 @@ set runtimepath^=D:\.vim\bundle\vim-easymotion
 set runtimepath^=D:\.vim\bundle\ale
 set runtimepath^=D:\code\vimscript\lvthw\potion-plugin
 set runtimepath^=D:\code\mine\codeforces_vim
+set runtimepath^=D:\code\mine\ansi_color_code_vim
 
 let netrw_home='D:\\Program Files (x86)\\Vim\\vim81'
 
