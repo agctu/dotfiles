@@ -42,16 +42,26 @@ def execfile(path):
         exec(f.read(),globals())
 
 class Cmd:
-    def __init__(self,cmd):
-        self.cmd=cmd
-
     def __repr__(self):
-        os.system(self.cmd)
+        self.execute()
         return ''
 
-cls=Cmd('cls')
+    def execute(self):
+        pass
 
-del Cmd
+class FCmd(Cmd):
+    def __init__(self,f):
+        self.f=f
+
+    def execute(self):
+        self.f()
+
+class OsCmd(FCmd):
+    def __init__(self,cmd):
+        super().__init__(lambda : os.system(cmd))
+
+cls=OsCmd('cls')
+q=FCmd(lambda :exit(0))
 
 if 'auto_load.py' in os.listdir():
     execfile('auto_load.py')
