@@ -84,17 +84,6 @@ set autoindent
 set expandtab
 "}}}
 
-"Autocmd {{{
-"from here-> https://stackoverflow.com/questions/6076592/vim-set-formatoptions-being-lost
-augroup mine
-
-autocmd!
-autocmd BufNewFile,BufRead * setlocal formatoptions=cql
-autocmd FileType vim setlocal foldmethod=marker
-
-augroup END
-"}}}
-
 "Plugins {{{
 filetype off
 
@@ -113,4 +102,15 @@ map <Leader> <Plug>(easymotion-prefix)
 
 "this does not work?
 filetype plugin on
+"}}}
+
+"Autocmd {{{
+"from here-> https://stackoverflow.com/questions/6076592/vim-set-formatoptions-being-lost
+augroup mine
+
+autocmd!
+autocmd BufNewFile,BufRead * setlocal formatoptions=cql
+autocmd FileType vim setlocal foldmethod=marker
+
+augroup END
 "}}}
