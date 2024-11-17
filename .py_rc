@@ -1,6 +1,46 @@
 import os
 
 print('preimporting')
+from forbiddenfruit import curse
+
+def curseBuiltinsIfHas(name,f,has_name):
+    for i in dir(__builtins__):
+        cls=eval(i)
+        if type(cls)==type and hasattr(cls,has_name):
+            try:
+                curse(cls,name,f)
+            except Exception as e:
+                pass
+
+def getInstance(cls):
+    for i in [
+        lambda cls:cls(),
+        lambda cls:cls([]),
+        lambda cls:cls(len,[])
+    ]:
+        try:
+            return i(cls)
+        except Exception as e:
+            pass
+    return None
+
+def curseBuiltinsIter(name,f):
+    for i in dir(__builtins__):
+        cls=eval(i)
+        if not (type(cls)==type and hasattr(cls,'__iter__')):
+            continue
+        try:
+            curse(cls,name,f)
+        except Exception as e:
+            pass
+
+curseBuiltinsIfHas('len',lambda x:len(x),'__len__')
+curseBuiltinsIfHas('iter',lambda x:iter(x),'__iter__')
+curseBuiltinsIter('list',lambda x: list(x))
+curseBuiltinsIter('tuple',lambda x: tuple(x))
+curseBuiltinsIter('filter',lambda x,f: filter(f,x))
+curseBuiltinsIter('map',lambda x,f: map(f,x))
+
 
 def pdir(*argv):
     if len(argv)==0:
