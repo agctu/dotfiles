@@ -61,7 +61,7 @@ tnoremap <C-l> <C-w>l
 "}}}
 
 "F-key Shortcuts {{{
-nnoremap <F2> gg"+yG<C-o><C-o>
+nnoremap <F2> :%y+<cr>
 nnoremap <F3> :call SetTitle()<CR>9gg$
 nnoremap <F4> :split $MYVIMRC<CR>
 nnoremap <F5> :call CompileCurrentFile()<CR>
