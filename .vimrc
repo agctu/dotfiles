@@ -12,6 +12,8 @@ set guifont=Lucida_console:h12:cANSI:qDRAFT
 set autoread
 colorscheme evening
 set guioptions-=T
+set exrc
+
 nnoremap L $
 nnoremap H ^
 "set hls
