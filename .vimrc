@@ -117,6 +117,7 @@ filetype plugin on
 augroup mine
 
 autocmd!
+"starting vim maximazied
 autocmd BufNewFile,BufRead * setlocal formatoptions=cql
 autocmd FileType vim setlocal foldmethod=marker
 
