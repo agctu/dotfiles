@@ -20,3 +20,20 @@ alias cp='cp -i'
 alias dc=cd
 alias gdb='gdb -q' # avoid tedious sentences
 alias find=/usr/bin/find # in msys on my windows pc, find is resolute to that find of windows
+
+function maceoff() {
+    export MSYS2_ARG_CONV_EXCL='*'
+}
+
+function maceon() {
+    unset MSYS2_ARG_CONV_EXCL
+}
+
+
+function editrc() {
+    vim ~/.bash_aliases
+}
+
+function reloadrc() {
+    . ~/.bash_aliases
+}
