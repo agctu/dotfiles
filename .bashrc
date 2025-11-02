@@ -133,7 +133,7 @@ set -o vi
 
 # add to PATH
 
-export PATH=$PATH:/home/agctxy/Programs
+export PATH=$PATH:/home/agctxy/Programs:/mingw64/bin
 
 # change PS1
 
