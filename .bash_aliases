@@ -3,13 +3,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     alias open=xdg-open;
     # go to my compiler folder
     alias work='cd ~/Code/modern_compiler_implementation/tiger/ && tmux'
-elif [[ "$OSTYPE" == "msys" ]]; then
+elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
     open(){
         a=${1//\//\\}
         explorer $a
     }
 else
-    echo "Unexpected";
+    echo "OSTYPE is Unexpected $OSTYPE";
 fi;
 
 alias cls=clear # I'm used to cls in windows cmd
