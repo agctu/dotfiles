@@ -1,7 +1,8 @@
 [alias]
-	# llog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	llog = log --oneline
-	glog = log --decorate --oneline --all --graph
-	unstash = stash pop
-	st = status
-    append = commit --amend --no-edit
+    # llog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    llog = log --oneline
+    gl = log --decorate --oneline --graph
+    gla = gl --all
+    unstash = stash pop
+    st = status
+    app = commit --amend --no-edit
